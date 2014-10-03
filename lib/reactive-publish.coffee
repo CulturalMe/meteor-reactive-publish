@@ -89,8 +89,9 @@ Meteor.reactivePublish = (name, f) ->
 								@added(collectionName, id, fields)
 								
 						removed: (id) =>
-							delete record.ids[id]
-							@removed(collectionName, id)
+							if id in _.keys(record.ids)
+								delete record.ids[id]
+								@removed(collectionName, id)
 							
 						changed: (id, fields) =>
 							@changed(collectionName, id, fields)
