@@ -6,6 +6,9 @@
   "version": "0.1.6",
   "git": "https://github.com/Diggsey/meteor-reactive-publish.git",
   "packages": {
-    "server-deps": "0.1.2"
+    "server-deps": {
+      "git": "https://github.com/CulturalMe/meteor-server-deps.git",
+      "branch": "edgee-meteor-1"
+    }
   }
 }
